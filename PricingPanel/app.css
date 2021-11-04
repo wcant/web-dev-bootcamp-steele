@@ -1,0 +1,128 @@
+body {
+  background-color: rgb(85, 159, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* the panel won't move to the center vertically until you add this */
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.panel {
+  background-color: white;
+  border-radius: 10px;
+  padding: 15px 25px;
+  width: 100%;
+  max-width: 960px;
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: -5px 20px 30px -5px rgba(56, 56, 56, 0.3);
+}
+
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 50px;
+}
+
+/* .pricing-plan ul {
+  padding: 0 2.3em;
+} */
+
+.pricing-plan:nth-of-type(2) {
+  border-left: 1px solid rgb(235, 235, 235);
+  border-right: 1px solid rgb(235, 235, 235);
+}
+
+.pricing-plan img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.pricing-header {
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.pricing-features {
+  margin: 50px 0 25px;
+  color: #016ff9;
+}
+
+.pricing-features-item {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 15px 0;
+  border-top: 1px solid #e1f1ff;
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+  color: #016ff9;
+  display: block;
+  font-weight: 700;
+  font-size: 1.7em;
+}
+
+.pricing-button {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 15px 35px;
+  margin: 25px 0;
+  text-decoration: none;
+  color: #348efe;
+  transition: background-color 200ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+  color: white;
+  background-color: #348efe;
+}
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:focus {
+  color: white;
+  background-color: #269aff;
+}
+
+@media (max-width: 900px) {
+  .panel {
+    flex-direction: column;
+  }
+
+  .pricing-plan:nth-of-type(2) {
+    border-top: 1px solid rgb(236, 236, 236);
+    border-bottom: 1px solid rgb(236, 236, 236);
+  }
+
+  /* Remove borders from flex row */
+
+  .pricing-plan:nth-of-type(2) {
+    border-left: none;
+    border-right: none;
+  }
+}

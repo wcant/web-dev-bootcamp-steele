@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Forms</h1>
+
+    <form action="/tacos">
+      <p>
+        <label for="username">Enter a username:</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="username"
+          name="username"
+        />
+      </p>
+      <p>
+        <label for="password">Enter a password:</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="password"
+          name="password"
+        />
+      </p>
+      <p>
+        <label for="color">Enter a color:</label>
+        <input id="color" type="color" name="color" />
+      </p>
+      <p>
+        <label for="number">Enter a number:</label>
+        <input
+          id="number"
+          type="number"
+          placeholder="enter a number"
+          name="num"
+        />
+      </p>
+      <p>
+        <button>Submit</button>
+      </p>
+    </form>
+
+    <!-- outside first form -->
+    <h2>hijacking searches</h2>
+    <h3>search reddit</h3>
+    <form action="https://www.reddit.com/search">
+      <input type="text" name="q" />
+      <button>Search Reddit</button>
+    </form>
+    <h3>search google</h3>
+    <form action="https://www.google.com/search">
+      <input type="text" name="q" />
+      <button>Search Google</button>
+    </form>
+
+    <h2>More INputs</h2>
+    <form action="/birds">
+      <input type="checkbox" name="agree_tos" id="agree" checked />
+      <label for="agree">I agree to everything</label>
+      <button>Submit</button>
+    </form>
+
+    <div style="padding-top: 25px">
+      <form action="">
+        <label for="username">Enter a username:</label>
+        <input type="text" id="username" placeholder="username" />
+
+        <label for="password">Enter a password:</label>
+        <input type="password" id="password" placeholder="password" />
+        <p>
+          <button type="submit">Register</button>
+        </p>
+      </form>
+    </div>
+
+    <div>
+      <h1>Race Registration</h1>
+      <form action="">
+        <p>
+          <label for="firstname">First Name</label>
+          <input type="text" required />
+
+          <label for="lastname" required>Last Name</label>
+          <input type="text" />
+        </p>
+        <h2>Select a Race:</h2>
+        <p>
+          <input type="radio" id="fivek" name="race" value="fivek" required />
+          <label for="fivek">Fun Run 5k</label>
+          <br />
+          <input type="radio" id="half" name="race" value="half" />
+          <label for="half">Half Marathon</label>
+          <br />
+          <input type="radio" id="full" name="race" value="full" />
+          <label for="full">Full Marathon</label>
+        </p>
+        <p>
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required />
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" required />
+        </p>
+        <p>
+          Select Age Group
+          <select name="age" id="age" required>
+            <option value="18to25">18-25</option>
+            <option value="26to39">26-39</option>
+            <option value="40plus">40+</option>
+          </select>
+        </p>
+        <p>
+          <button>Register!</button>
+        </p>
+      </form>
+    </div>
+  </body>
+</html>
