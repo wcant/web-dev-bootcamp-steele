@@ -1,10 +1,11 @@
 
 const searchForm = document.querySelector('#searchForm');
-const imgContainer = document.querySelector('.images');
+const imgContainer = document.querySelector('.posters-container');
 
 function addImage(url) {
     const img = document.createElement('img');
     img.src = url;
+    img.classList.add('poster');
     imgContainer.append(img);
 }
 
