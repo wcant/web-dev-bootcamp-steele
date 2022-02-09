@@ -11,5 +11,10 @@
     <%= comment.comment %> - <%= comment.username %>
     <br>
     <a href="/comments">Back</a>
+    <a href="/comments/<%= comment.id %>/edit">[Edit]</a>
+    <form action="http://localhost:3000/comments/<%= comment.id %>?_method=DELETE" method="post">
+        <button type="submit">Delete</button>
+    </form>
+
 </body>
 </html>

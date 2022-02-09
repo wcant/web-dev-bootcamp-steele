@@ -10,9 +10,13 @@
     <h1>Comments</h1>
     <ul>
         <% for (let c of comments) { %>
-            <li><a href="comments/<%= c.id %>">  <%= c.comment %> - <b><%= c.username %></b></a> <a href="comments/:id/edit">[Edit]</a></li>
+            <li><a href="/comments/<%= c.id %>">  <%= c.comment %> - <b><%= c.username %></b></a> <a href="/comments/<%= c.id %>/edit">[Edit]</a>     
+                <form action="http://localhost:3000/comments/<%= c.id %>?_method=DELETE" method="post">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
         <% } %> 
     </ul>
-    <a href="comments/new">New Comment</a>
+    <a href="/comments/new">New Comment</a>
 </body>
 </html>
